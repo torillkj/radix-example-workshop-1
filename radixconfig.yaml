@@ -14,20 +14,20 @@ spec:
       - name: http
         port: 3000
       public: false
-      monitoring: true
-      resources:
-        requests:
-          memory: "64Mi"
-          cpu: "150m"
-        limits:
-          memory: "128Mi"
-          cpu: "200m"
-      replicas: 4
-      environmentVariables:
+      environmentConfig:
         - environment: production
           variables:
             PORT: 3000
             NODE_ENV: "production"
+          monitoring: true
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "150m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          replicas: 4
       # secrets:
       #   - MY_SUPER_SECRET
     - name: www
@@ -36,21 +36,21 @@ spec:
        - name: http
          port: 3001
       public: true
-      monitoring: false
-      resources:
-        requests:
-          memory: "64Mi"
-          cpu: "400m"
-        limits:
-          memory: "128Mi"
-          cpu: "600m"
-      replicas: 1
-      environmentVariables:
+      environmentConfig:
         - environment: production
           variables:
             PORT: 3001
             NODE_ENV: "production"
             ECHO_URL: "http://echo:3000"
+          monitoring: false
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "400m"
+            limits:
+              memory: "128Mi"
+              cpu: "600m"
+          replicas: 1
   dnsAppAlias:
     environment: production
     component: www
