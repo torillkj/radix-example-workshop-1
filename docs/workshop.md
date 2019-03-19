@@ -60,13 +60,13 @@ Remember that the Echo app needs to run somewhere to get proper response.
 
 ### 1.1.5. Preparing for Radix
 
-- The Radix cluster we use for the workshop is available at https://console.radix.equinor.com/
-- Radix "getting started++" is available at https://www.radix.equinor.com/
+- The Radix cluster we use for the workshop is available at https://console.playground.radix.equinor.com/
+- Radix documentation is available at https://www.radix.equinor.com/
 
 Important to know:
 
 1. The difference between ```platform user``` and ```application user```
-2. Important terminology: ```application```, ```environments```,```components```, and ```replicas```
+2. Important terminology: ```application```, ```environments```,```components```, and ```replicas``` [Important Radix Concepts](https://www.radix.equinor.com/docs/topic-concepts/)
 3. ```raidxconfig.yaml``` - lives on the master branch and is your infrastrucure as code - drive your app in Radix.
 
 ### 1.1.6. Explore radixconfig.yaml
