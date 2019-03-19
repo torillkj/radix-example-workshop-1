@@ -50,7 +50,7 @@ npm run debug
 
 The echo application use the following environment variables:
 
-* ```PORT``` to define which local port to listen to
+* ```PORT``` to define which local port to listen to (default is 3000)
 * ```NODE_ENV``` with values ```development``` or ```production``` (used by the Express framework)
 
 ## Local docker development - build and run Echo
