@@ -32,6 +32,7 @@ router.get('/', function(req, res, next) {
             echoObject.RADIX_ENVIRONMENT = (bodyObj.RADIX_ENVIRONMENT || 'No Radix Environment?');
             echoObject.RADIX_HOSTNAME = (bodyObj.HOSTNAME || 'No hostname');
             echoObject.RADIX_HOSTPLATFORM = (bodyObj.HOSTPLATFORM || 'No platform');
+            echoObject.NODE_ENV = (bodyObj.NODE_ENV || 'No Unknown');
            
             res.render('echo', { title: 'Echo response', echoObject });
 
