@@ -7,6 +7,9 @@ spec:
     - name: production
       build:
         from: master
+    - name: feature1
+      build:
+        from: feature1
   components:
     - name: echo
       src: ./echo
@@ -28,6 +31,19 @@ spec:
               memory: "128Mi"
               cpu: "200m"
           replicas: 4
+        - environment: feature1
+          variables:
+            PORT: 3000
+            NODE_ENV: "test"
+          monitoring: true
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "150m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          replicas: 2  
       # secrets:
       #   - MY_SUPER_SECRET
     - name: www
@@ -51,6 +67,20 @@ spec:
               memory: "128Mi"
               cpu: "600m"
           replicas: 1
+        - environment: feature1
+          variables:
+            PORT: 3001
+            NODE_ENV: "test"
+            ECHO_URL: "http://echo:3000"
+          monitoring: false
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "400m"
+            limits:
+              memory: "128Mi"
+              cpu: "600m"
+          replicas: 1  
   dnsAppAlias:
     environment: production
     component: www
