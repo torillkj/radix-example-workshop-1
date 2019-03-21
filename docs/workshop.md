@@ -87,7 +87,7 @@ Radix support connecting a branch to a specific environment. Let's explore this.
 
 1. Update the radixconfig.yaml file in ```master```, commit, push and explore what's happening in Radix. (Copy the file ./radixconfigs/radixconfig-feature1.yaml to ./radixconfig.yaml. Remember to update app name)
 2. Check out the "new" branch (feature1)
-3. Examine code - the new feature  (getting a new env variable from Echo)
+3. Examine code - the new feature  (getting a new env variable from Echo (node_env))
     - Alternatively:
     - Checkout a new branch
     - Update the tests for Echo
