@@ -22,10 +22,10 @@ spec:
           monitoring: true
           resources:
             requests:
-              memory: "8Mi"
-              cpu: "1000m"
+              memory: "16Mi"
+              cpu: "100m"
             limits:
-              memory: "12Mi"
+              memory: 20Mi"
               cpu: "200m"
           replicas: 4
       # secrets:
@@ -45,10 +45,10 @@ spec:
           monitoring: false
           resources:
             requests:
-              memory: "8Mi"
+              memory: "16Mi"
               cpu: "100m"
             limits:
-              memory: "12Mi"
+              memory: "20Mi"
               cpu: "200m"
           replicas: 1
   dnsAppAlias:
