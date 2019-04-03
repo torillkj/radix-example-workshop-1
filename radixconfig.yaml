@@ -45,10 +45,10 @@ spec:
           monitoring: false
           resources:
             requests:
-              memory: "52Mi"
+              memory: "50Mi"
               cpu: "10m"
             limits:
-              memory: "64Mi"
+              memory: "54Mi"
               cpu: "20m"
           replicas: 1
   dnsAppAlias:
