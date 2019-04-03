@@ -22,11 +22,11 @@ spec:
           monitoring: true
           resources:
             requests:
-              memory: "2Mi"
-              cpu: "50m"
+              memory: "8Mi"
+              cpu: "1000m"
             limits:
-              memory: "4Mi"
-              cpu: "150m"
+              memory: "12Mi"
+              cpu: "200m"
           replicas: 4
       # secrets:
       #   - MY_SUPER_SECRET
@@ -45,10 +45,10 @@ spec:
           monitoring: false
           resources:
             requests:
-              memory: "2Mi"
+              memory: "8Mi"
               cpu: "100m"
             limits:
-              memory: "4Mi"
+              memory: "12Mi"
               cpu: "200m"
           replicas: 1
   dnsAppAlias:
