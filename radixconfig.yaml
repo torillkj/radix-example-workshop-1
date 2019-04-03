@@ -46,10 +46,10 @@ spec:
           resources:
             requests:
               memory: "52Mi"
-              cpu: "100m"
+              cpu: "25m"
             limits:
               memory: "64Mi"
-              cpu: "200m"
+              cpu: "50m"
           replicas: 1
   dnsAppAlias:
     environment: production
